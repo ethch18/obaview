@@ -65,7 +65,7 @@ export default class MainPage extends React.Component {
             {!!this.state.currQuery && 
                 <SearchModal input={this.state.currQuery} updater={this.appendStop} closer={this.clearModal} stopCache={this.state.stopCache}/>
             }
-            <div className="footer-center footer-margin">For now, please visit <a href="/mappings.txt">this document</a> to find mappings between route numbers and route IDs (for searching).</div>
+            <div className="footer-center footer-margin">For now, please visit <a href="./mappings.txt">this document</a> to find mappings between route numbers and route IDs (for searching).</div>
             <div className="footer-center">
                 {"\u00a9 "} 
                 <a href="https://echau18.gitlab.io" className="noul nohi">Ethan Chau</a> 
