@@ -28,7 +28,7 @@ export default class SearchDirection extends React.Component {
         const stops = this.props.stops;
         for (let i = 0; i < stops.length; i++) {
             const currId = stops[i];
-            console.log(currId);
+            // console.log(currId);
             let stopName;
             if (this.props.stopCache[currId]) {
                 stopName = this.props.stopCache[currId];

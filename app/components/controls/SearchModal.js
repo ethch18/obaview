@@ -25,7 +25,7 @@ export default class SearchModal extends React.Component {
     componentDidMount() {
         axios.get(`${ENDPOINTS['BASE_URL']}${ENDPOINTS['STOPS_FOR_ROUTE']}${this.state.routeId}`)
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 if (response.data.code != 200 || !response.data.data) {
                     this.setState({ error: response.data.text });
                 }
@@ -37,7 +37,7 @@ export default class SearchModal extends React.Component {
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 this.setState({ error});
             });
     }

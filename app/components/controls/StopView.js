@@ -43,7 +43,7 @@ export default class StopView extends React.Component {
         this.setState({ stopName: undefined, stopError: undefined });
         axios.get(`${ENDPOINTS['BASE_URL']}${ENDPOINTS['STOP']}${this.props.stopId}`)
             .then((response) => {
-                console.log(response);
+                // console.log(response);
                 if (response.data.code != 200 || !response.data.data) {
                     this.setState({ stopError: response.data.text });
                 }
@@ -52,7 +52,7 @@ export default class StopView extends React.Component {
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 this.setState({ stopError: error })
             });
     }
@@ -61,7 +61,7 @@ export default class StopView extends React.Component {
         this.setState({ stopEntries: undefined, arrError: undefined });
         axios.get(`${ENDPOINTS['BASE_URL']}${ENDPOINTS['ARRIVALS_DEPARTURES']}${this.props.stopId}`)
         .then((response) => {
-            console.log(response);
+            // console.log(response);
             if (response.data.code != 200 || !response.data.data) {
                 this.setState({ arrError: response.data.text });
             }
@@ -109,7 +109,7 @@ export default class StopView extends React.Component {
             content = this.state.stopEntries;
         }
         else if (this.state.arrError) {
-            content = "An error occurred.";
+            content = "An error occurred.  Please try again.";
         }
         else {
             content = (
