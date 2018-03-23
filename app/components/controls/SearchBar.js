@@ -30,7 +30,7 @@ export default class SearchBar extends React.Component {
                 <Form>
                 <Input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search by route ID..."
                     onChange={this.updateQuery}
                     className="searchbar-input searchbar-content"
                     onKeyDown={(event) => {
