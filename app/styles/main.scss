@@ -6,9 +6,20 @@
     cursor: pointer;
 }
 
-.center-footer {
+.footer-center {
     text-align: center;
+}
+
+.footer-margin {
     margin-top: 20px;
 }
 
+a.nohi {
+    color: inherit;
+}
+
+a.noul:hover {
+    text-decoration: none;
+    color: $dark-primary-color;
+}
 
