@@ -1,0 +1,432 @@
+Seattle Children's Hospital Shuttle
+	98_863	SCH-Church
+	98_865	SCH-E1
+	98_867	SCH-Green
+	98_869	SCH-Gold
+	98_871	SCH-Magnuson Park
+	98_875	SCH-Parking Loop
+	98_876	SCH-Purple
+Pierce Transit
+	3_1	1 - 6th Ave / Pacific Ave
+	3_2	2 - Bridgeport / S 19th St
+	3_3	3 - South Tacoma Way
+	3_4	4 - S 112th St
+	3_500	500 - Federal Way
+	3_501	501 - Milton Federal way
+	3_400	400 - Puyallup/DowntownTacoma
+	3_402	402 - Meridian/Federal Way
+	3_409	409 - Puyallup/72nd
+	3_425	425 - Puyallup Connector
+	3_202	202 - 72nd Street
+	3_206	206 - Pacific Hwy/Tillicum/Madigan
+	3_212	212 - Steilacoom
+	3_214	214 - Washington
+	3_100	100 - Purdy Gig Harbor TCC
+	3_102	102 - Purdy Gig Harbor Tacoma Expre
+	3_10	10 - Pearl St
+	3_11	11 - Pt. Defiance
+	3_13	13 - N 30th St
+	3_16	16 - N 21st /North End
+	3_28	28 - S 12TH ST
+	3_497	497 - Lakeland Hill connector
+	3_41	41 - 56th St/Salishan
+	3_42	42 - McKinley
+	3_45	45 - Yakima
+	3_48	48 - Sheridan/M st
+	3_52	52 - TCC Tac Mall
+	3_53	53 - University Place
+	3_54	54 - S 38th St/Portland
+	3_55	55 - Parkland Tac Mall
+	3_57	57 - Tacoma Mall
+	3_63	63 - NE Tacoma
+Everett Transit
+	97_10	29 - S to Mall Station - N to College Station
+	97_11	70 - E to Boeing - W to Mukilteo
+	97_1	2 - South Everett Circulator
+	97_2	3 - S to W Casino - N to Everett Station
+	97_3	4 - S to Downtown - N to College Station
+	97_4	6 - N to Harborfront - S to Everett Station
+	97_5	7 - S to Mall Station - N to College Station
+	97_6	8 - S to Airport Rd - N to Everett Station
+	97_7	12 - Mall Circulator
+	97_8	17 - S to Mall Station - N to College Station
+	97_9	18 - W to Mukilteo - E to Everett Station
+Seattle Center Monorail
+	96_A	Monorail - Seattle Center Monorail
+Metro Transit
+	1_100300	917 - Pacific - Algona - Auburn Station
+	1_100512	A Line - A-Line Rapid Ride
+	1_100212	37 - Alaska Junction - Alki - Downtown Seattle
+	1_102512	910 - North Auburn - Auburn SuperMall
+	1_102633	628 - North Bend - Issaquah Highlands P&R
+	1_100214	372 - UW/Cascadia College - University District
+	1_100215	373 - Aurora Village TC - University District
+	1_102634	630 - So Mercer Island - First Hill - Downtown Seattle
+	1_100459	218 - Issaquah Highlands - Downtown Seattle
+	1_102636	631 - Gregory Heights - Burien Transit Center
+	1_102639	63 - Northgate - University District - First Hill
+	1_100219	4 - East Queen Anne - Downtown Seattle - Judkins Park
+	1_100210	36 - Othello Station - Beacon Hill - Downtown Seattle
+	1_100223	43 - Univ Dist-Montlake-Capitol Hill-Downtown Seattle
+	1_100344	986 - Houghton P&R - Lakeside School
+	1_102644	823 - Cougar Mtn - Newport HS - International School
+	1_100224	44 - Ballard - Montlake
+	1_100345	987 - Rainier Beach - Lakeside School
+	1_100104	212 - Eastgate P&R - Downtown Seattle
+	1_100225	45 - Loyal Heights - University District
+	1_100346	988 - Madrona - Lakeside School
+	1_100347	989 - Eastgate - Lakeside School
+	1_102645	824 - Newcastle - Newport HS - International School
+	1_100106	214 - Issaquah - Downtown Seattle
+	1_100227	47 - Summit - Downtown Seattle
+	1_100348	99 - International District - Pioneer Square - Belltown
+	1_100469	180 - Auburn Station - Kent Station - SeaTac - Burien TC
+	1_100228	48 - Mt Baker - University District
+	1_102647	635 - Des Moines Marina District - Angle Lake Station
+	1_100108	216 - Bear Creek P&R - Sammamish - Downtown Seattle
+	1_100229	5 - Shoreline CC - Greenwood - Downtown Seattle
+	1_100109	217 - Downtown Seattle - North Issaquah
+	1_100341	982 - Bear Creek P&R - Lakeside School
+	1_100221	41 - Lake City - Northgate TC - Downtown Seattle
+	1_100101	21 - Arbor Heights-Westwood Village-Downtown Seattle
+	1_100343	984 - Lakeside School - Downtown Seattle
+	1_102641	Redmond LOOP - Redmond Loop
+	1_102619	F Line - F-Line Rapid Ride
+	1_102615	E Line - E-Line Rapid Ride
+	1_100201	342 - Shoreline P&R - Renton Transit Center
+	1_100202	345 - Shoreline Community College - Northgate TC
+	1_100203	346 - Aurora Village TC - Northgate TC
+	1_100324	952 - Auburn P&R-Kent Sta-Bellevue-Kirkland-Boeing Evrtt
+	1_100204	347 - Mountlake Terrace - Northgate TC
+	1_102623	894 - Mercer Village Shopping Ctr - Mercer Island HS
+	1_100205	348 - Richmond Beach - Shoreline - Northgate TC
+	1_100447	49 - Univ District - Broadway - Downtown Seattle
+	1_100448	248 - Avondale - Redmond TC - Kirkland TC
+	1_100207	355 - Shoreline Community College - Downtown Seattle
+	1_102628	895 - Ardmore Park - Lake Washington High School
+	1_100014	116 - Fauntleroy Ferry - Downtown Seattle
+	1_100135	243 - Overlake TC - Kenmore P&R
+	1_100136	245 - Kirkland Transit Center - Crossroads - Factoria
+	1_102555	893 - Forbes Crk - Downtown Kirkland - Lk Washington HS
+	1_100016	118 - Tahlequah - Vashon - Downtown Seattle
+	1_100137	246 - Eastgate P&R-Somerset-Bellevue TC-Clyde Hill
+	1_100258	661 - I-5/NE 145th - I-5/NE 45th - SODO
+	1_102558	931 - UW/Cascadia College - Redmond TC
+	1_100017	119 - Dockton - Vashon - Downtown Seattle
+	1_100259	67 - Northgate - Roosevelt - University District
+	1_102557	915 - Enumclaw - Auburn Station
+	1_100018	12 - Interlaken Park - First Hill - Downtown Seattle
+	1_100139	249 - Overlake TC - South Bellevue P&R
+	1_100019	120 - Burien TC - Westwood Village - Downtown Seattle
+	1_100130	238 - UW/Cascadia Coll-Bothell-Totem Lake TC-Kirkland TC
+	1_100493	224 - Duvall - Redmond Transit Center
+	1_100252	62 - Sand Point - Green Lake - Downtown Seattle
+	1_102552	226 - Eastgate P&R-Crossroads-Overlake-Bellevue TC
+	1_100011	111 - Lake Kathleen - Downtown Seattle
+	1_100132	24 - West Magnolia - Downtown Seattle
+	1_100253	64 - Lake City - Univ Dist - S Lake Union - First Hill
+	1_100495	193 - Federal Way S 320th P&R-Federal Way TC-First Hill
+	1_100012	113 - Shorewood - Downtown Seattle
+	1_100133	240 - Bellevue Transit Center - Renton Transit Center
+	1_100254	65 - Lake City  - University District
+	1_100496	930 - Kingsgate P&R - Redmond Town Center
+	1_102554	241 - Eastgate P&R - Bellevue Transit Center
+	1_100013	114 - Renton Highlands - Downtown Seattle
+	1_100146	255 - Brickyard P&R - Kirkland TC - Downtown Seattle
+	1_100267	73 - Jackson Park - Univ District - Downtown Seattle
+	1_100026	128 - Southcenter - Alaska Junction - Admiral District
+	1_100268	74 - Sand Point - Downtown Seattle
+	1_100148	257 - Brickyard P&R - Downtown Seattle
+	1_100269	75 - Northgate - Lake City - Sand Point - Univ District
+	1_100028	13 - Seattle Pacific - Downtown Seattle
+	1_102561	907 - Enumclaw - Renton TC
+	1_100020	121 - Highline Coll-Marine Vw-BurienTC-Downtown Seattle
+	1_100021	122 - Highline College - Burien TC - Downtown Seattle
+	1_100263	7 - Prentice St - Rainier Beach - Downtown Seattle
+	1_100022	123 - Gregory Heights - Burien TC - Downtown Seattle
+	1_100143	252 - Kingsgate - Downtown Seattle
+	1_100264	70 - University District - Eastlake - Downtown Seattle
+	1_100023	124 - Tukwila International Blvd Sta - Downtown Seattle
+	1_100265	71 - Wedgwood - University District - Downtown Seattle
+	1_100024	125 - Westwood Vill - S Seattle Coll - Downtown Seattle
+	1_100113	221 - Education Hill - Crossroads - Eastgate
+	1_100476	244 - Kenmore P&R - Overlake Transit Center
+	1_100238	55 - Admiral District-Alaska Junction-Downtown Seattle
+	1_100350	994 - Downtown Seattle - Lakeside School
+	1_100230	50 - West Seatle - SODO - Beacon Hill - Columbia City
+	1_100351	995 - Laurelhurst - Lakeside School
+	1_100110	219 - Redmond-Issaquah Highlands P&R-Downtown Seattle
+	1_100473	981 - Lakeside School - Houghton P&R
+	1_100111	22 - Westwood Villge-Shorewood-Gatewood-Alaska Junction
+	1_100475	157 - Lake Meridian P&R - Downtown Seattle
+	1_100003	101 - Renton Transit Center - Downtown Seattle
+	1_100124	232 - Duvall - Redmond TC - Overlake TC - Bellevue TC
+	1_100487	102 - Fairwood - Downtown Seattle
+	1_100004	105 - Renton Highlands - Renton Transit Center
+	1_100246	57 - Alaska Junction - Genesee Hill - Admiral District
+	1_100005	106 - Renton Transit Center - Skyway - Downtown Seattle
+	1_100126	234 - Kenmore - Kirkland TC - Bellevue TC
+	1_100489	156 - Southcenter - SeaTac - Des Moines - Highline Coll
+	1_100006	107 - Renton Transit Center - Rainier Beach
+	1_100127	235 - Kingsgate P&R - Kirkland TC - Bellevue TC
+	1_100128	236 - Woodinville P&R - Kirkland Transit Center
+	1_100249	60 - Westwood Village - Georgetown - Broadway
+	1_102549	980 - Madison Valley - Lakeside School
+	1_100129	237 - Woodinville P&R - Bellevue Transit Center
+	1_102548	B Line - B-Line Rapid Ride
+	1_100009	11 - Madison Park - Capitol Hill - Downtown Seattle
+	1_100481	775 - Seacrest Park - Admiral District - Alki
+	1_100242	56 - Alki - Admiral District - Downtown Seattle
+	1_100001	1 - Kinnear - Downtown Seattle
+	1_100002	10 - Capitol Hill - Downtown Seattle
+	1_100058	166 - Kent Sndr Sta-Highline Coll-Des Moines-Burien TC
+	1_100059	167 - South Renton P&R - University District
+	1_100292	903 - Twin Lakes - Federal Way TC
+	1_100051	158 - Kent East Hill - Downtown Seattle
+	1_100293	908 - Renton Highlands - Renton TC
+	1_100052	159 - Timberlane - Kent Station - Downtown Seattle
+	1_100173	3 - North Queen Anne - Downtown Seattle - Madrona
+	1_102593	906 - Fairwood - Southcenter
+	1_100175	301 - Aurora Vill TC - Richmond Beach - Downtown Seattle
+	1_100296	913 - Kent Station - Riverview
+	1_102596	629 - No. Bend-Snoqualmie-Fall City-Carnation-Duvall
+	1_100297	914 - Downtown Kent - Kent East Hill
+	1_100177	303 - Shoreline - Northgate TC - First Hill
+	1_100057	164 - Green River College - Kent Station
+	1_100178	304 - Richmond Beach - Downtown Seattle
+	1_100299	916 - Downtown Kent - Kent East Hill - Lake Meridian
+	1_100290	901 - Mirror Lake - Federal Way TC
+	1_100069	178 - S Federal Way P&R - Downtown Seattle
+	1_100061	169 - Kent Sounder Station - Renton TC
+	1_100182	308 - Horizon View - Downtown Seattle
+	1_100062	17 - Loyal Heights-Sunset Hill-Ballard-Downtown Seattle
+	1_100183	309 - Kenmore P&R - South Lake Union - First Hill
+	1_100184	31 - Univ District - Fremont - Central Magnolia
+	1_100186	311 - Woodinville - Downtown Seattle
+	1_100187	312 - UW/Cascadia College - Downtown Seattle
+	1_100068	177 - Federal Way S 320th P&R - Downtown Seattle
+	1_100060	168 - Maple Valley - Kent Sounder Station
+	1_100159	268 - Redmond - Downtown Seattle
+	1_100039	14 - Mt Baker - Downtown Seattle
+	1_100270	76 - Wedgwood - Downtown Seattle
+	1_100271	77 - North City - Downtown Seattle
+	1_100030	131 - Burien TC - Georgetown - Downtown Seattle
+	1_100151	26 - East Green Lake - Downtown Seattle
+	1_100272	773 - Seacrest Park - West Seattle Junction
+	1_102572	29 - Ballard - SPU - Queen Anne - Downtown Seattle
+	1_100031	132 - Burien TC - South Park - Downtown Seattle
+	1_100273	78 - Laurelhurst - University District
+	1_102574	40 - Northgte-Ballard-Fremont-Westlake-Downtown Seattle
+	1_100275	8 - Seattle Center - Capitol Hill - Rainier Beach
+	1_102573	887 - Newport Hills P&R - Newport HS
+	1_102576	C Line - C-Line Rapid Ride
+	1_100168	277 - Juanita - University District
+	1_100289	9 - Rainier Beach - Columbia City - Broadway
+	1_100048	153 - Kent Sounder Station - Renton Transit Center
+	1_100169	28 - Whittier Heights - Fremont - Downtown Seattle
+	1_100049	154 - Tukwila Station - Boeing Industrial
+	1_100160	269 - Issaquah Transit Center - Overlake P&R
+	1_102581	D Line - D-Line Rapid Ride
+	1_100161	27 - Colman Park - Downtown Seattle
+	1_100041	143 - Black Diamond - Downtown Seattle
+	1_100162	271 - Issaquah - University District
+	1_100283	886 - Newport HS - Bellevue HS - International School
+	1_100042	148 - Fairwood - Renton Transit Center
+	1_100284	888 - Lakemont - Eastgate P&R - Inlerlake HS
+	1_100285	889 - Cherry Crest - Sammamish HS - International School
+	1_100044	15 - Blue Ridge - Crown Hill - Downtown Seattle
+	1_100045	150 - Kent Station - Southcenter - Downtown Seattle
+	1_100287	891 - Mercer Island P&R - S Mercer Is - Mercer Island HS
+	1_100288	892 - Mercer Island P&R - W Mercer Is - Mercer Island HS
+	1_100095	204 - S Mercer Island-Island Crest Way-Mercer Island P&R
+	1_100099	208 - North Bend - Issaquah Transit Center
+	1_100091	200 - Swedish Med Ctr Issaquah - Issaquah Community Ctr
+	1_100092	201 - S Mercer Island - W Mercer Way - Mercer Island P&R
+	1_100072	181 - Twin Lakes P&R - Auburn Station - Green River Coll
+	1_100193	32 - Univ District-Fremont-Interbay-Seattle Center West
+	1_100073	182 - Northeast Tacoma - Federal Way TC
+	1_100194	33 - Discovery Park - Downtown Seattle
+	1_100074	183 - Federal Way TC - Star Lake - Kent Station
+	1_100195	330 - Shoreline Community College - Lake City
+	1_100196	331 - Shoreline Comm Coll-Aurora Village TC-Kenmore P&R
+	1_100077	186 - Enumclaw - Griffin Wells - Auburn Station
+	1_100078	187 - Federal Way - Twin Lakes
+	1_100190	316 - Meridian Park - Downtown Seattle
+	1_100070	179 - Twin Lakes P&R-Federal Way Way TC-Downtown Seattle
+	1_100071	18 - North Beach - Ballard - Downtown Seattle
+	1_100084	192 - Star Lake - Downtown Seattle
+	1_100088	197 - Twin Lakes P&R - University District
+	1_100089	2 - West Queen Anne - Downtown Seattle - Madrona
+	1_100081	19 - Magnolia - Downtown Seattle
+	1_100082	190 - Redondo Heights P&R - Star Lake - Downtown Seattle
+Washington State Ferries
+	95_2116	Tahlequah - Point Defiance
+	95_1019	Friday Harbor - Sidney B.C.
+	95_2022	Southworth - Vashon Island
+	95_514	Clinton - Mukilteo
+	95_209	Southworth - Fauntleroy
+	95_101	Friday Harbor - Anacortes
+	95_229	Vashon Island - Fauntleroy
+	95_110	Anacortes - Friday Harbor
+	95_113	Anacortes - Lopez Island
+	95_115	Anacortes - Orcas Island
+	95_118	Anacortes - Shaw Island
+	95_119	Anacortes - Sidney B.C.
+	95_128	Kingston - Edmonds
+	95_131	Lopez Island - Anacortes
+	95_1915	Sidney B.C. - Orcas Island
+	95_1913	Sidney B.C. - Lopez Island
+	95_1910	Sidney B.C. - Friday Harbor
+	95_37	Bainbridge Island - Seattle
+	95_1918	Sidney B.C. - Shaw Island
+	95_1810	Shaw Island - Friday Harbor
+	95_145	Mukilteo - Clinton
+	95_47	Bremerton - Seattle
+	95_151	Orcas Island - Anacortes
+	95_1815	Shaw Island - Orcas Island
+	95_1813	Shaw Island - Lopez Island
+	95_1819	Shaw Island - Sidney B.C.
+	95_1711	Port Townsend - Coupeville
+	95_73	Seattle - Bainbridge Island
+	95_74	Seattle - Bremerton
+	95_181	Shaw Island - Anacortes
+	95_191	Sidney B.C. - Anacortes
+	95_1621	Point Defiance - Tahlequah
+	95_1513	Orcas Island - Lopez Island
+	95_1510	Orcas Island - Friday Harbor
+	95_1519	Orcas Island - Sidney B.C.
+	95_1518	Orcas Island - Shaw Island
+	95_1315	Lopez Island - Orcas Island
+	95_1310	Lopez Island - Friday Harbor
+	95_1319	Lopez Island - Sidney B.C.
+	95_1318	Lopez Island - Shaw Island
+	95_1117	Coupeville  - Port Townsend
+	95_920	Fauntleroy - Southworth
+	95_922	Fauntleroy - Vashon Island
+	95_812	Edmonds - Kingston
+	95_2220	Vashon Island - Southworth
+	95_1018	Friday Harbor - Shaw Island
+	95_1015	Friday Harbor - Orcas Island
+	95_1013	Friday Harbor - Lopez Island
+Kingcounty Marine Divison
+	KMD_100337	975 - Water Taxi: Vashon Island - Downtown Seattle
+	KMD_100336	973 - Water Taxi: West Seattle - Downtown Seattle
+Intercity Transit
+	19_10	47 - Capital Medical Center
+	19_11	48 - Capital Mall/TESC
+	19_12	60 - Lacey via Kaiser
+	19_13	62A - Martin Way/Meridian
+	19_14	62B - Martin Way/The Meadows
+	19_15	64 - College St/Amtrak
+	19_16	66 - Ruddell Road
+	19_17	67 - Tri Lake
+	19_18	68 - Yelm Hwy/Carpenter Rd
+	19_20	94 - Boulevard Rd/Yelm
+	19_21	603 - Olympia/Tacoma
+	19_23	620 - Olympia/Tacoma Mall
+	19_28	42 - Family Court
+	19_29	43 - SPSCC/Tumwater Square
+	19_33	49 - Capital Mall
+	19_35	101 - Dash
+	19_36	411 - Nightline
+	19_37	605 - Olympia/Lacey/Tacoma
+	19_38	612 - Olympia\Hawks Prairie or Woodland Sq\Tacoma
+	19_1	12 - West Tumwater
+	19_2	13 - East Tumwater
+	19_5	21 - N Bethel/N Central
+	19_7	41 - TESC
+	19_8	44 - SPSCC/Capital Mall
+	19_9	45 - Conger/Capital Mall
+Sound Transit
+	40_560	560 - Bellevue - Sea-Tac - W. Seattle
+	40_566	566 - Auburn - Overlake
+	40_567	567 - Kent - Overlake
+	40_574	574 - Lakewood - SeaTac
+	40_577	577 - Federal Way - Seattle
+	40_578	578 - Puyallup - Seattle
+	40_SNDR_EV	SNDR - Sounder Everett - Seattle
+	40_580	580 - Lakewood to Puyallup
+	40_586	586 - Tacoma - U. District
+	40_590	590 - Tacoma - Seattle
+	40_592	592 - Olympia/DuPont - Seattle
+	40_594	594 - Lakewood - Seattle
+	40_595	595 - Gig Harbor - Seattle
+	40_596	596 - Bonney Lake - Sumner
+	40_TLINK	TLink - Tacoma Link light rail
+	40_100511	542 - Redmond - University District
+	40_AMTK	Amtrak
+	40_SNDR_TL	SNDR - Sounder Lakewood - Seattle
+	40_100232	522 - Woodinville - Seattle
+	40_100235	540 - Kirkland - University District
+	40_100236	545 - Redmond - Seattle
+	40_100479	Link - LINK: SeaTac - Downtown Seattle - UW/Husky Stadium
+	40_100240	554 - Issaquah - Seattle
+	40_100241	555 - Issaquah - Northgate
+	40_100239	550 - Bellevue - Seattle
+	40_100451	556 - Issaquah - Northgate
+	40_102640	541 - Overlake P&R - University District
+City of Seattle
+	23_100340	South Lake Union Streetcar - Streetcar: Fairview/Aloha - Westlake/McGraw
+	23_102638	First Hill Streetcar - Streetcar: Pioneer Square - Capital Hill
+GO Transit
+	99_10	10 - Lewis Main & North
+	99_20	20 - Madigan/McChord Field
+	99_1	1 - Lewis Main/Pendleton
+	99_2	2 - Madigan/McChord Field/512 Park & Ride
+	99_3	3 - Gray Army Airfield/Post Exchange
+	99_4	4 - Lewis North/Post Exchange
+	99_7	7 - McChord Housing and Lakewood Connector
+Community Transit
+	29_421	421 - Marysville - Seattle
+	29_422	422 - Stanwood - Seattle
+	29_424	424 - Snohomish - Seattle
+	29_425	425 - Lake Stevens - Seattle
+	29_435	435 - Mill Creek - Seattle
+	29_201	201 - Smokey Point - Lynnwood
+	29_202	202 - Smokey Point - Lynnwood
+	29_209	209 - Smokey Point - Lake Stevens
+	29_220	220 - Arlington - Smokey Point
+	29_101	101 - Mariner P&R - Aurora Village
+	29_222	222 - Marysville - Tulalip
+	29_105	105 - Hardeson Road - Bothell
+	29_106	106 - Mariner P&R - Bothell
+	29_227	227 - Arlington - Boeing
+	29_107	107 - Lynnwood - Boeing
+	29_109	109 - Ash Way P&R - Lake Stevens
+	29_230	230 - Darrington - Smokey Point
+	29_111	111 - Brier - Mountlake Terrace
+	29_112	112 - Mountlake Terrace - Ash Way P&R
+	29_113	113 - Mukilteo - Lynnwood TC
+	29_115	115 - McCollum Park P&R - Aurora Village
+	29_116	116 - Silver Firs - Edmonds
+	29_119	119 - Ash Way P&R - Mountlake Terrace
+	29_240	240 - Stanwood - Smokey Point
+	29_120	120 - Canyon Park -Edmonds CC
+	29_247	247 - Stanwood - Boeing
+	29_130	130 - Edmonds - Lynnwood
+	29_270	270 - Gold Bar - Everett
+	29_271	271 - Gold Bar - Everett
+	29_280	280 - Granite Falls - Everett
+	29_196	196 - Ash Way P&R- Edmonds
+	29_1	1 - Pull Out
+	29_810	810 - McCollum Park - University District
+	29_821	821 - Marysville - University District
+	29_701	Swift - Everett - Aurora Village
+	29_855	855 - Lynnwood - University District
+	29_860	860 - McCollum Park - University District
+	29_871	871 - Edmonds P&R - University District
+	29_510	510 - Everett - Seattle
+	29_511	511 - Ash Way - Seattle
+	29_512	512 - Everett - Seattle
+	29_513	513 - Everett - Seattle
+	29_880	880 - Mukilteo - University District
+	29_402	402 - Lynnwood - Seattle
+	29_405	405 - Edmonds P&R - Seattle
+	29_410	410 - Mariner P&R - Seattle
+	29_532	532 - Everett - Bellevue
+	29_412	412 - Silver Firs - Seattle
+	29_413	413 - Swamp Creek P&R - Seattle
+	29_535	535 - Lynnwood - Bellevue
+	29_415	415 - North Lynnwood - Seattle
+	29_416	416 - Edmonds - Seattle
+	29_417	417 - Mukilteo - Seattle
