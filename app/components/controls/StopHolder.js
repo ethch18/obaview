@@ -24,7 +24,7 @@ export default class StopHolder extends React.Component {
     render() {
         const { stopIds } = this.props;
         const cols = [];
-        const views = [];
+        this.views = [];
         for (let i = 0; i < stopIds.length; i++) {
             const currId = stopIds[i];
             const currView = (

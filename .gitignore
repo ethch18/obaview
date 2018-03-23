@@ -1,4 +1,5 @@
 .vscode/
+util/secret.py
 # Numerous always-ignore extensions
 *.diff
 *.err
