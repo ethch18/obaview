@@ -9,21 +9,14 @@ pages:
   environment: prod
   cache:
     paths:
-    - proj/node_modules/
+    - node_modules/
 
   script:
-  - mkdir public
-  - cd proj
-  - pwd
   - npm update
   - npm install -g brunch
   - npm install
   - brunch build --production
   - ls public
-  - cp -r public ../
-  - ls
-  - cd ..
-  - ls
   artifacts:
     paths:
     - public
