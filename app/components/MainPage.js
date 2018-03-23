@@ -74,6 +74,7 @@ export default class MainPage extends React.Component {
                 {" "}
                 <a href="https://gitlab.com/echau18" className="nohi"><span className="fa icon fa-gitlab" /></a>
             </div>
+            <div className="footer-center">Made with <span className="fa icon fa-heart" /> in Seattle</div>
         </div>
         );
     }
