@@ -17,7 +17,9 @@ export default class StopHolder extends React.Component {
 
     refreshAll() {
         for (let view of this.views) {
-            view.conditionalRefresh();
+            if (!!view) {
+                view.conditionalRefresh();
+            }        
         }
     }
     
