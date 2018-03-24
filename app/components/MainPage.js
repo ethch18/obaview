@@ -1,4 +1,5 @@
 import React from 'react';
+import HelpModal from './controls/HelpModal'
 import SearchBar from './controls/SearchBar';
 import StopHolder from './controls/StopHolder';
 import SearchModal from './controls/SearchModal';
@@ -17,11 +18,17 @@ export default class MainPage extends React.Component {
             stopSet,
             stopCache: {},
             cookies,
+            showHelp: false,
         };
         this.search = this.search.bind(this);
         this.appendStop = this.appendStop.bind(this);
         this.deleteStop = this.deleteStop.bind(this);
         this.clearModal = this.clearModal.bind(this);
+        this.toggleHelp = this.toggleHelp.bind(this);
+    }
+
+    toggleHelp() {
+        this.setState({ showHelp: !this.state.showHelp });
     }
 
     appendStop(stopId) {
@@ -61,7 +68,7 @@ export default class MainPage extends React.Component {
         return (
         <div>
             <SearchBar searchFunction={this.search} />
-            <StopHolder stopIds={this.state.stopIds} stopDeleter={this.deleteStop} />
+            <StopHolder stopIds={this.state.stopIds} stopDeleter={this.deleteStop} helpFunc={this.toggleHelp} />
             {!!this.state.currQuery && 
                 <SearchModal input={this.state.currQuery} updater={this.appendStop} closer={this.clearModal} stopCache={this.state.stopCache}/>
             }
@@ -75,6 +82,7 @@ export default class MainPage extends React.Component {
                 <a href="https://gitlab.com/echau18" className="nohi"><span className="fa icon fa-gitlab" /></a>
             </div>
             <div className="footer-center">Made with <span className="fa icon fa-heart" /> in Seattle</div>
+            <HelpModal isOpen={this.state.showHelp} toggle={this.toggleHelp} />
         </div>
         );
     }

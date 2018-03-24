@@ -6,6 +6,7 @@ import { Col, Container, Row } from 'reactstrap';
 const propTypes = {
     stopIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     stopDeleter: PropTypes.func.isRequired,
+    helpFunc: PropTypes.func.isRequired,
 };
 
 export default class StopHolder extends React.Component {
@@ -53,9 +54,10 @@ export default class StopHolder extends React.Component {
         return (
             <div>
                 <span 
-                    className="fa icon fa-refresh stop-refresh-all clickable"
+                    className="fa icon fa-refresh stop-floating-icon clickable"
                     onClick={() => this.refreshAll()}
                 />
+                <span className="stop-floating-icon fa icon fa-question-circle clickable" onClick={this.props.helpFunc}/>               
                 <Container>
                     <Row>
                         {cols}
