@@ -34,7 +34,7 @@ export default class SearchBar extends React.Component {
                     onChange={this.updateQuery}
                     className="searchbar-input searchbar-content"
                     onKeyDown={(event) => {
-                        event.keyCode == 13 && this.submitQuery()
+                        event.keyCode == 13 && !!this.state.query && this.submitQuery()
                     }}
                 />
                 <div className="searchbar-button-outer searchbar-content">
