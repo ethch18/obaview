@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Form, Input } from 'reactstrap';
+import { Button, Input } from 'reactstrap';
 
 const propTypes = {
     searchFunction: PropTypes.func.isRequired,
@@ -27,14 +27,13 @@ export default class SearchBar extends React.Component {
     render() {
         return (
             <div className="searchbar-wrap">
-                <Form>
                 <Input
                     type="text"
                     placeholder="Search by route ID..."
                     onChange={this.updateQuery}
                     className="searchbar-input searchbar-content"
                     onKeyDown={(event) => {
-                        event.keyCode == 13 && !!this.state.query && this.submitQuery()
+                        event.keyCode == 13 && this.submitQuery()
                     }}
                 />
                 <div className="searchbar-button-outer searchbar-content">
@@ -43,7 +42,6 @@ export default class SearchBar extends React.Component {
                         onClick={() => this.submitQuery()}
                     />
                 </div>
-                </Form>
             </div>
         );
     }
