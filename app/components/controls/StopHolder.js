@@ -26,6 +26,19 @@ export default class StopHolder extends React.Component {
     
     render() {
         const { stopIds } = this.props;
+
+        if (stopIds.length == 0) {
+            return (
+                <Container className="stop-getstarted-outer">
+                    <div className="stop-getstarted">
+                        {"No stops to show yet!  Get started by searching for a route ID in the search bar or clicking "}
+                        <span className="fa icon fa-question-circle clickable" onClick={this.props.helpFunc}/>
+                        {" for help!"}
+                    </div>
+                </Container>
+            );
+        }
+
         const cols = [];
         this.views = [];
         for (let i = 0; i < stopIds.length; i++) {
@@ -57,7 +70,7 @@ export default class StopHolder extends React.Component {
                     className="fa icon fa-refresh stop-floating-icon clickable"
                     onClick={() => this.refreshAll()}
                 />
-                <span className="stop-floating-icon fa icon fa-question-circle clickable" onClick={this.props.helpFunc}/>               
+                <span className="stop-floating-icon fa icon fa-question-circle clickable" onClick={this.props.helpFunc}/>
                 <Container>
                     <Row>
                         {cols}
