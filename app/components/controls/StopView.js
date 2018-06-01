@@ -82,7 +82,13 @@ export default class StopView extends React.Component {
                         </div>);
                     i++;
                 }
-                this.setState({ stopEntries })
+                if (stopEntries.length == 0) {
+                    const fillerText = <div>No buses coming!</div>;
+                    this.setState({ stopEntries: fillerText });
+                }
+                else {
+                    this.setState({ stopEntries });
+                }
             }
         })
         .catch((error) => {
