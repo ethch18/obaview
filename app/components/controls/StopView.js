@@ -67,6 +67,7 @@ export default class StopView extends React.Component {
             }
             else {
                 const arrDep = response.data.data.entry.arrivalsAndDepartures;
+                arrDep.sort((a, b) => a.scheduledDepartureTime - b.scheduledDepartureTime);
                 const stopEntries = [];
                 let i = 0;
                 for (let entry of arrDep) {
