@@ -6,3 +6,6 @@ export const ENDPOINTS = {
 };
 
 export const COOKIE = 'obaview-stopIds';
+
+export const REFRESH_SECONDS = 10;
+export const REFRESH_MILLI = 1000 * REFRESH_SECONDS;

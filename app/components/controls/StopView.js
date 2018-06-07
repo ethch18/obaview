@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { Button } from 'reactstrap';
 import axios from 'axios';
 import Spinner from 'react-spinner';
-import { ENDPOINTS } from '../../util/Constants';
+import { ENDPOINTS, REFRESH_MILLI } from '../../util/Constants';
 
 const propTypes = {
     stopId: PropTypes.string.isRequired,
     stopIndex: PropTypes.number.isRequired,
     stopDeleter: PropTypes.func.isRequired,
+    globalResetter: PropTypes.func,
 };
 
 export default class StopView extends React.Component {
@@ -18,13 +19,14 @@ export default class StopView extends React.Component {
         this.refreshName = this.refreshName.bind(this);
         this.refreshArrivals = this.refreshArrivals.bind(this);
         this.conditionalRefresh = this.conditionalRefresh.bind(this);
+        this.restartTimer = this.restartTimer.bind(this);
     }
     
     componentDidMount() {
         this.refreshName();
         this.refreshArrivals();
 
-        const timer = setInterval(this.conditionalRefresh, 120000);
+        const timer = setInterval(this.conditionalRefresh, REFRESH_MILLI);
         this.setState({ timer });
     }
 
@@ -32,13 +34,23 @@ export default class StopView extends React.Component {
         clearInterval(this.state.timer);
     }
     
+    restartTimer() {
+        if (!!this.state.timer) {
+            clearInterval(this.state.timer);
+        }
+        const timer = setInterval(this.conditionalRefresh, REFRESH_MILLI);
+        this.setState({ timer });
+    }
+
     conditionalRefresh() {
         if (!!this.state.stopError) {
             this.refreshName();
         }
         this.refreshArrivals();
+
+        this.restartTimer();
     }
-    
+
     refreshName() {
         this.setState({ stopName: undefined, stopError: undefined });
         axios.get(`${ENDPOINTS['BASE_URL']}${ENDPOINTS['STOP']}${this.props.stopId}`)

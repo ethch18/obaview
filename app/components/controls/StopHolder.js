@@ -13,7 +13,7 @@ export default class StopHolder extends React.Component {
     constructor(props) {
         super(props);
         this.views = [];
-        this.refreshAll.bind(this);
+        this.refreshAll = this.refreshAll.bind(this);
     }
 
     refreshAll() {
@@ -23,7 +23,7 @@ export default class StopHolder extends React.Component {
             }        
         }
     }
-    
+
     render() {
         const { stopIds } = this.props;
 
