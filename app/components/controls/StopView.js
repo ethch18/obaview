@@ -79,20 +79,23 @@ export default class StopView extends React.Component {
             }
             else {
                 const arrDep = response.data.data.entry.arrivalsAndDepartures;
-                arrDep.sort((a, b) => a.scheduledDepartureTime - b.scheduledDepartureTime);
+                arrDep.sort((a, b) => a.predictedDepartureTime - b.predictedDepartureTime);
                 const stopEntries = [];
                 let i = 0;
                 for (let entry of arrDep) {
                     const shortName = entry.routeShortName;
                     const dest = entry.tripHeadsign;
-                    const arrEntity = new Date(entry.scheduledDepartureTime);
+                    const arrEntity = new Date(entry.predictedDepartureTime);
                     const arrTime = arrEntity.toLocaleTimeString();
                     const timeDiff = Math.floor((arrEntity - new Date()) / 60000);
-                    stopEntries.push(
-                        <div key={`${dest}-${i}`}>
-                            <div>{`${shortName} - ${dest}`}</div>
-                            <div>{`${arrTime} (${timeDiff} min.)`}</div>
-                        </div>);
+                    if (timeDiff >= 0) {
+                        stopEntries.push(
+                            <div key={`${dest}-${i}`}>
+                                <div>{`${shortName} - ${dest}`}</div>
+                                <div>{`${arrTime} (${timeDiff} min.)`}</div>
+                            </div>
+                        );
+                    }
                     i++;
                 }
                 if (stopEntries.length == 0) {
