@@ -40,9 +40,17 @@
     }   
 }
 
-.searchmodal-header {
-    font-size: 17px;
+.searchmodal-routename {
+    font-size: 18px;
     margin: 5px 0;
+}
+
+.searchmodal-direction {
+    font-size: 17px;
+}
+
+.searchmodal-content {
+    margin: 5px 20px;
 }
 
 .searchmodal-errorcontent {

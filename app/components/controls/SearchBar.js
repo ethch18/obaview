@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Input } from 'reactstrap';
 
 const propTypes = {
-    searchFunction: PropTypes.func.isRequired,
+    searchFunction: PropTypes.func.isRequired
 };
 
 export default class SearchBar extends React.Component {
@@ -15,12 +15,12 @@ export default class SearchBar extends React.Component {
     }
 
     updateQuery(event) {
-        this.setState({ query: event.target.value })
+        this.setState({ query: event.target.value });
     }
 
     submitQuery() {
         if (!!this.state.query) {
-            this.props.searchFunction(this.state.query);
+            this.props.searchFunction(this.state.query.trim());
         }
     }
 
@@ -32,12 +32,12 @@ export default class SearchBar extends React.Component {
                     placeholder="Search by route ID..."
                     onChange={this.updateQuery}
                     className="searchbar-input searchbar-content"
-                    onKeyDown={(event) => {
-                        event.keyCode == 13 && this.submitQuery()
+                    onKeyDown={event => {
+                        event.keyCode == 13 && this.submitQuery();
                     }}
                 />
                 <div className="searchbar-button-outer searchbar-content">
-                    <Button 
+                    <Button
                         className="searchbar-button-inner icon fa fa-2x fa-search"
                         onClick={() => this.submitQuery()}
                     />

@@ -8,12 +8,13 @@ import {
     GENERAL_ERROR,
     INVALID_ROUTE_ERROR
 } from '../../util/Constants';
-import SearchDirection from './SearchDirection';
+import SearchRoute from './SearchRoute';
 
 const propTypes = {
     input: PropTypes.string.isRequired,
     updater: PropTypes.func.isRequired,
     closer: PropTypes.func.isRequired,
+    routeCache: PropTypes.object.isRequired,
     stopCache: PropTypes.object.isRequired
 };
 
@@ -22,7 +23,11 @@ export default class SearchModal extends React.Component {
         super(props);
         // TODO: fancy logic for converting route no. to route id
         this.state = {
-            routeId: this.props.input
+            searchQuery: this.props.input,
+            routes: [],
+            routeRefDatas: [],
+            stopDatas: [],
+            stopRefDatas: []
         };
     }
 
@@ -30,7 +35,7 @@ export default class SearchModal extends React.Component {
         axios
             .get(
                 `${ENDPOINTS['BASE_URL']}${ENDPOINTS['STOPS_FOR_ROUTE']}${
-                    this.state.routeId
+                    this.state.searchQuery
                 }`
             )
             .then(response => {
@@ -40,10 +45,18 @@ export default class SearchModal extends React.Component {
                     this.setState({ error: INVALID_ROUTE_ERROR });
                 } else {
                     this.setState({
-                        data:
-                            response.data.data.entry.stopGroupings[0]
-                                .stopGroups,
-                        refData: response.data.data.references.stops
+                        stopDatas: this.state.stopDatas.concat([
+                            response.data.data.entry.stopGroupings[0].stopGroups
+                        ]),
+                        stopRefDatas: this.state.stopRefDatas.concat([
+                            response.data.data.references.stops
+                        ]),
+                        routes: this.state.routes.concat([
+                            response.data.data.entry.routeId
+                        ]),
+                        routeRefDatas: this.state.routeRefDatas.concat([
+                            response.data.data.references.routes
+                        ])
                     });
                 }
             })
@@ -65,23 +78,32 @@ export default class SearchModal extends React.Component {
                     </div>
                 </div>
             );
-        } else if (this.state.data && this.state.refData) {
-            const directions = [];
-            for (let i = 0; i < this.state.data.length; i++) {
-                const heading = this.state.data[i].name.name;
-                const stops = this.state.data[i].stopIds;
-                directions.push(
-                    <SearchDirection
-                        heading={heading}
-                        stops={stops}
+        } else if (
+            this.state.stopDatas &&
+            this.state.stopRefDatas &&
+            this.state.routes &&
+            this.state.routeRefDatas
+        ) {
+            const returnedRoutes = [];
+            for (let i = 0; i < this.state.routes.length; i++) {
+                const route = this.state.routes[i];
+                const routeRefData = this.state.routeRefDatas[i];
+                const stopData = this.state.stopDatas[i];
+                const stopRefData = this.state.stopRefDatas[i];
+                returnedRoutes.push(
+                    <SearchRoute
+                        routeCache={this.props.routeCache}
+                        route={route}
+                        routeRefData={routeRefData}
+                        stopRefData={stopRefData}
+                        stopData={stopData}
                         stopCache={this.props.stopCache}
-                        refData={this.state.refData}
                         updater={this.props.updater}
-                        key={`${heading}-${i}`}
+                        key={`returnedRoutes-${route}`}
                     />
                 );
             }
-            content = <div>{directions}</div>;
+            content = returnedRoutes;
         } else {
             content = <Spinner />;
         }

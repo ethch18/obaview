@@ -7,14 +7,14 @@ const propTypes = {
     stops: PropTypes.arrayOf(PropTypes.string).isRequired,
     stopCache: PropTypes.object.isRequired,
     refData: PropTypes.arrayOf(PropTypes.object).isRequired,
-    updater: PropTypes.func.isRequired,
-}
+    updater: PropTypes.func.isRequired
+};
 
 export default class SearchDirection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false,
+            show: false
         };
         this.toggleShow = this.toggleShow.bind(this);
     }
@@ -32,42 +32,45 @@ export default class SearchDirection extends React.Component {
             let stopName;
             if (this.props.stopCache[currId]) {
                 stopName = this.props.stopCache[currId];
-            }
-            else {
+            } else {
                 for (let stopEntry of this.props.refData) {
+                    this.props.stopCache[stopEntry.id] = `${stopEntry.name} (${
+                        stopEntry.direction
+                    })`;
                     if (stopEntry.id === currId) {
-                        stopName = `${stopEntry.name} (${stopEntry.direction})`;
-                        this.props.stopCache[currId] = stopName;
+                        stopName = this.props.stopCache[currId];
                         break;
                     }
                 }
             }
             stopItems.push(
-                <ListGroupItem 
-                    key={`${this.props.heading}-${i}`} 
+                <ListGroupItem
+                    key={`${this.props.heading}-${i}`}
                     onClick={() => this.props.updater(currId)}
-                    className="clickable"
+                    className="clickable searchmodal-content"
                 >
                     {stopName}
                 </ListGroupItem>
-            )
+            );
         }
         return (
             <div>
-                <div onClick={this.toggleShow} className="searchmodal-header clickable">
+                <div
+                    onClick={this.toggleShow}
+                    className="searchmodal-content clickable"
+                >
                     {this.props.heading}
-                    {this.state.show ? 
-                        <span className="fa icon fa-caret-down endspan-icon"/> :
-                        <span className="fa icon fa-caret-right endspan-icon"/>
-                    }
+                    {this.state.show ? (
+                        <span className="fa icon fa-caret-down endspan-icon" />
+                    ) : (
+                        <span className="fa icon fa-caret-right endspan-icon" />
+                    )}
                 </div>
                 <Collapse isOpen={this.state.show}>
-                    <ListGroup>
-                        {stopItems}
-                    </ListGroup>
+                    <ListGroup>{stopItems}</ListGroup>
                 </Collapse>
             </div>
-        )
+        );
     }
 }
 
