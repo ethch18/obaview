@@ -1,11 +1,10 @@
-Seattle Children's Hospital Shuttle
-	98_863	SCH-Church
-	98_865	SCH-E1
-	98_867	SCH-Green
-	98_869	SCH-Gold
-	98_871	SCH-Magnuson Park
-	98_875	SCH-Parking Loop
-	98_876	SCH-Purple
+Seattle Children's Hospital
+	98_867-16	Grn - Green
+	98_865-16	Pink - Pink
+	98_876-16	Pur - Purple
+	98_869-16	Gold - Gold
+	98_871-16	Blue - Blue
+	98_863-16	Ylw - Yellow
 Pierce Transit
 	3_1	1 - 6th Ave / Pacific Ave
 	3_2	2 - Bridgeport / S 19th St
@@ -51,8 +50,9 @@ Everett Transit
 	97_7	12 - Mall Circulator
 	97_8	17 - S to Mall Station - N to College Station
 	97_9	18 - W to Mukilteo - E to Everett Station
-Seattle Center Monorail
-	96_A	Monorail - Seattle Center Monorail
+SeattleCenterMonorail
+	96_A	Monorail-WL - Seattle Monorail
+	96_B	Monorail-SC - Seattle Monorail
 Metro Transit
 	1_100300	917 - Pacific - Algona - Auburn Station
 	1_100512	A Line - A-Line Rapid Ride
@@ -75,13 +75,14 @@ Metro Transit
 	1_100104	212 - Eastgate P&R - Downtown Seattle
 	1_100225	45 - Loyal Heights - University District
 	1_100346	988 - Madrona - Lakeside School
+	1_102646	Trailhead Direct Issaquah Alps - Mount Baker TC - Issaquah Alps
 	1_100347	989 - Eastgate - Lakeside School
 	1_102645	824 - Newcastle - Newport HS - International School
 	1_100106	214 - Issaquah - Downtown Seattle
 	1_100227	47 - Summit - Downtown Seattle
-	1_100348	99 - International District - Pioneer Square - Belltown
 	1_100469	180 - Auburn Station - Kent Station - SeaTac - Burien TC
 	1_100228	48 - Mt Baker - University District
+	1_100349	992 - Overlake TC - Lakeside School
 	1_102647	635 - Des Moines Marina District - Angle Lake Station
 	1_100108	216 - Bear Creek P&R - Sammamish - Downtown Seattle
 	1_100229	5 - Shoreline CC - Greenwood - Downtown Seattle
@@ -155,8 +156,10 @@ Metro Transit
 	1_100350	994 - Downtown Seattle - Lakeside School
 	1_100230	50 - West Seatle - SODO - Beacon Hill - Columbia City
 	1_100351	995 - Laurelhurst - Lakeside School
+	1_102651	Trailhead Direct Mailbox Peak - Twin Falls Middle School - Mailbox Peak
 	1_100110	219 - Redmond-Issaquah Highlands P&R-Downtown Seattle
 	1_100473	981 - Lakeside School - Houghton P&R
+	1_102650	Trailhead Direct Mt. Si - Capitol Hill - Mt. Si
 	1_100111	22 - Westwood Villge-Shorewood-Gatewood-Alaska Junction
 	1_100475	157 - Lake Meridian P&R - Downtown Seattle
 	1_100003	101 - Renton Transit Center - Downtown Seattle
@@ -344,7 +347,7 @@ Sound Transit
 	40_574	574 - Lakewood - SeaTac
 	40_577	577 - Federal Way - Seattle
 	40_578	578 - Puyallup - Seattle
-	40_SNDR_EV	SNDR - Sounder Everett - Seattle
+	40_SNDR_EV	Sounder Everett - Seattle
 	40_580	580 - Lakewood to Puyallup
 	40_586	586 - Tacoma - U. District
 	40_590	590 - Tacoma - Seattle
@@ -352,14 +355,14 @@ Sound Transit
 	40_594	594 - Lakewood - Seattle
 	40_595	595 - Gig Harbor - Seattle
 	40_596	596 - Bonney Lake - Sumner
-	40_TLINK	TLink - Tacoma Link light rail
+	40_TLINK	Tacoma Link light rail
 	40_100511	542 - Redmond - University District
 	40_AMTK	Amtrak
-	40_SNDR_TL	SNDR - Sounder Lakewood - Seattle
+	40_SNDR_TL	Sounder Lakewood - Seattle
 	40_100232	522 - Woodinville - Seattle
 	40_100235	540 - Kirkland - University District
 	40_100236	545 - Redmond - Seattle
-	40_100479	Link - LINK: SeaTac - Downtown Seattle - UW/Husky Stadium
+	40_100479	Link light rail - LINK: SeaTac - Downtown Seattle - UW/Husky Stadium
 	40_100240	554 - Issaquah - Seattle
 	40_100241	555 - Issaquah - Northgate
 	40_100239	550 - Bellevue - Seattle
@@ -369,8 +372,6 @@ City of Seattle
 	23_100340	South Lake Union Streetcar - Streetcar: Fairview/Aloha - Westlake/McGraw
 	23_102638	First Hill Streetcar - Streetcar: Pioneer Square - Capital Hill
 GO Transit
-	99_10	10 - Lewis Main & North
-	99_20	20 - Madigan/McChord Field
 	99_1	1 - Lewis Main/Pendleton
 	99_2	2 - Madigan/McChord Field/512 Park & Ride
 	99_3	3 - Gray Army Airfield/Post Exchange
