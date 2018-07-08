@@ -45,11 +45,12 @@ export default function SearchRoute(props) {
                 }
             }
 
-            const agencyDescriptor = `Operated by ${agencyName}`;
+            const descriptor =
+                routeEntry.description || `Operated by ${agencyName}`;
 
-            routeCache[routeEntry.id] = `${
-                routeEntry.shortName
-            } (${routeEntry.description || agencyDescriptor})`;
+            routeCache[routeEntry.id] = routeEntry.shortName
+                ? `${routeEntry.shortName} (${descriptor})`
+                : descriptor;
             if (routeEntry.id === route) {
                 routeDescriptor = routeCache[route];
                 break;
