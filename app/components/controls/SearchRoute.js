@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import SearchDirection from './SearchDirection';
 
 const propTypes = {
+    agencyCache: PropTypes.object.isRequired,
+    agencyRefData: PropTypes.arrayOf(PropTypes.object).isRequired,
     route: PropTypes.string.isRequired,
     routeCache: PropTypes.object.isRequired,
     routeRefData: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -14,6 +16,8 @@ const propTypes = {
 
 export default function SearchRoute(props) {
     const {
+        agencyCache,
+        agencyRefData,
         route,
         routeCache,
         routeRefData,
@@ -28,9 +32,24 @@ export default function SearchRoute(props) {
         routeDescriptor = routeCache[route];
     } else {
         for (let routeEntry of routeRefData) {
-            routeCache[routeEntry.id] = `${routeEntry.shortName} (${
-                routeEntry.description
-            })`;
+            let agencyName;
+            if (agencyCache[routeEntry.agencyId]) {
+                agencyName = agencyCache[routeEntry.agencyId];
+            } else {
+                for (let agencyEntry of agencyRefData) {
+                    agencyCache[agencyEntry.id] = agencyEntry.name;
+                    if (routeEntry.agencyId === agencyEntry.id) {
+                        agencyName = agencyCache[agencyEntry.id];
+                        break;
+                    }
+                }
+            }
+
+            const agencyDescriptor = `Operated by ${agencyName}`;
+
+            routeCache[routeEntry.id] = `${
+                routeEntry.shortName
+            } (${routeEntry.description || agencyDescriptor})`;
             if (routeEntry.id === route) {
                 routeDescriptor = routeCache[route];
                 break;

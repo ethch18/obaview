@@ -14,6 +14,7 @@ export default class MainPage extends React.Component {
         const stopIds = cookies.get(COOKIE) || [];
         const stopSet = new Set(stopIds);
         this.state = {
+            agencyCache: {},
             routeCache: {},
             stopIds,
             stopSet,
@@ -77,14 +78,16 @@ export default class MainPage extends React.Component {
                         input={this.state.currQuery}
                         updater={this.appendStop}
                         closer={this.clearModal}
+                        agencyCache={this.state.agencyCache}
                         routeCache={this.state.routeCache}
                         stopCache={this.state.stopCache}
                     />
                 )}
                 <div className="footer-center footer-margin">
-                    For now, please visit{' '}
-                    <a href="./mappings.txt">this document</a> to find mappings
-                    between route numbers and route IDs (for searching).
+                    {
+                        'We now support searching by route number!  (Route number - ID mappings still live '
+                    }
+                    <a href="./mappings.txt">here</a>.)
                 </div>
                 <div className="footer-center">
                     {'\u00a9 '}

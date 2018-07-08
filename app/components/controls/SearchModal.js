@@ -6,7 +6,8 @@ import axios from 'axios';
 import {
     ENDPOINTS,
     GENERAL_ERROR,
-    INVALID_ROUTE_ERROR
+    INVALID_ROUTE_ERROR,
+    RESPONSE_OK
 } from '../../util/Constants';
 import SearchRoute from './SearchRoute';
 
@@ -14,6 +15,7 @@ const propTypes = {
     input: PropTypes.string.isRequired,
     updater: PropTypes.func.isRequired,
     closer: PropTypes.func.isRequired,
+    agencyCache: PropTypes.object.isRequired,
     routeCache: PropTypes.object.isRequired,
     stopCache: PropTypes.object.isRequired
 };
@@ -23,41 +25,62 @@ export default class SearchModal extends React.Component {
         super(props);
         // TODO: fancy logic for converting route no. to route id
         this.state = {
-            searchQuery: this.props.input,
-            routes: [],
-            routeRefDatas: [],
-            stopDatas: [],
-            stopRefDatas: []
+            searchQuery: this.props.input
         };
     }
 
     componentDidMount() {
         axios
             .get(
-                `${ENDPOINTS['BASE_URL']}${ENDPOINTS['STOPS_FOR_ROUTE']}${
+                `${ENDPOINTS['BASE_URL']}${ENDPOINTS['SEARCH']}${
                     this.state.searchQuery
                 }`
             )
             .then(response => {
                 // console.log(response);
-                if (response.data.code != 200 || !response.data.data) {
+                if (!response.data.data || response.data.data.length == 0) {
                     // this.setState({ error: response.data.text });
                     this.setState({ error: INVALID_ROUTE_ERROR });
                 } else {
-                    this.setState({
-                        stopDatas: this.state.stopDatas.concat([
-                            response.data.data.entry.stopGroupings[0].stopGroups
-                        ]),
-                        stopRefDatas: this.state.stopRefDatas.concat([
-                            response.data.data.references.stops
-                        ]),
-                        routes: this.state.routes.concat([
-                            response.data.data.entry.routeId
-                        ]),
-                        routeRefDatas: this.state.routeRefDatas.concat([
-                            response.data.data.references.routes
-                        ])
-                    });
+                    const stopDatas = [];
+                    const stopRefDatas = [];
+                    const routes = [];
+                    const routeRefDatas = [];
+                    const agencyRefDatas = [];
+
+                    for (let i = 0; i < response.data.data.length; i++) {
+                        const currResponse = response.data.data[i];
+                        if (currResponse.code === RESPONSE_OK) {
+                            stopDatas.push(
+                                currResponse.data.entry.stopGroupings[0]
+                                    .stopGroups
+                            );
+                            stopRefDatas.push(
+                                currResponse.data.references.stops
+                            );
+                            routes.push(currResponse.data.entry.routeId);
+                            routeRefDatas.push(
+                                currResponse.data.references.routes
+                            );
+                            agencyRefDatas.push(
+                                currResponse.data.references.agencies
+                            );
+                        }
+                    }
+
+                    if (response.data.data.length !== routes.length) {
+                        this.setState({ error: INVALID_ROUTE_ERROR });
+                    } else {
+                        this.setState({
+                            content: {
+                                stopDatas,
+                                stopRefDatas,
+                                routes,
+                                routeRefDatas,
+                                agencyRefDatas
+                            }
+                        });
+                    }
                 }
             })
             .catch(error => {
@@ -78,20 +101,25 @@ export default class SearchModal extends React.Component {
                     </div>
                 </div>
             );
-        } else if (
-            this.state.stopDatas &&
-            this.state.stopRefDatas &&
-            this.state.routes &&
-            this.state.routeRefDatas
-        ) {
+        } else if (this.state.content) {
+            const {
+                agencyRefDatas,
+                routes,
+                routeRefDatas,
+                stopDatas,
+                stopRefDatas
+            } = this.state.content;
             const returnedRoutes = [];
-            for (let i = 0; i < this.state.routes.length; i++) {
-                const route = this.state.routes[i];
-                const routeRefData = this.state.routeRefDatas[i];
-                const stopData = this.state.stopDatas[i];
-                const stopRefData = this.state.stopRefDatas[i];
+            for (let i = 0; i < routes.length; i++) {
+                const agencyRefData = agencyRefDatas[i];
+                const route = routes[i];
+                const routeRefData = routeRefDatas[i];
+                const stopData = stopDatas[i];
+                const stopRefData = stopRefDatas[i];
                 returnedRoutes.push(
                     <SearchRoute
+                        agencyCache={this.props.agencyCache}
+                        agencyRefData={agencyRefData}
                         routeCache={this.props.routeCache}
                         route={route}
                         routeRefData={routeRefData}
