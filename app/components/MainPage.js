@@ -27,6 +27,7 @@ export default class MainPage extends React.Component {
         this.deleteStop = this.deleteStop.bind(this);
         this.clearModal = this.clearModal.bind(this);
         this.toggleHelp = this.toggleHelp.bind(this);
+        this.reorderStop = this.reorderStop.bind(this);
     }
 
     toggleHelp() {
@@ -47,12 +48,18 @@ export default class MainPage extends React.Component {
     }
 
     deleteStop(index) {
-        const stopIds = this.state.stopIds;
-        const stopSet = this.state.stopSet;
+        const { stopIds, stopSet } = this.state;
         const stopId = stopIds[index];
         stopSet.delete(stopId);
         stopIds.splice(index, 1);
         this.setState({ stopSet, stopIds });
+        this.state.cookies.set(COOKIE, this.state.stopIds, { path: '/' });
+    }
+
+    reorderStop(oldIndex, newIndex) {
+        const { stopIds } = this.state;
+        stopIds.splice(newIndex, 0, stopIds.splice(oldIndex, 1)[0]);
+        this.setState({ stopIds });
         this.state.cookies.set(COOKIE, this.state.stopIds, { path: '/' });
     }
 
@@ -71,6 +78,7 @@ export default class MainPage extends React.Component {
                 <StopHolder
                     stopIds={this.state.stopIds}
                     stopDeleter={this.deleteStop}
+                    stopReorderer={this.reorderStop}
                     helpFunc={this.toggleHelp}
                 />
                 {!!this.state.currQuery && (
@@ -87,7 +95,8 @@ export default class MainPage extends React.Component {
                     {
                         'We now support searching by route number!  (Route number - ID mappings still live '
                     }
-                    <a href="./mappings.txt">here</a>.)
+                    <a href="./mappings.txt">here</a>
+                    .)
                 </div>
                 <div className="footer-center">
                     {'\u00a9 '}

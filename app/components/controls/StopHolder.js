@@ -6,6 +6,7 @@ import { Col, Container, Row } from 'reactstrap';
 const propTypes = {
     stopIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     stopDeleter: PropTypes.func.isRequired,
+    stopReorderer: PropTypes.func.isRequired,
     helpFunc: PropTypes.func.isRequired,
 };
 
@@ -49,6 +50,7 @@ export default class StopHolder extends React.Component {
                     ref={(instance) => {this.views.push(instance)}}
                     stopIndex={i}
                     stopDeleter={this.props.stopDeleter}
+                    draggable="true"
                  />
             );
             cols.push(
