@@ -3,12 +3,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import PropTypes from 'prop-types';
 import Spinner from 'react-spinner';
 import axios from 'axios';
-import {
-    ENDPOINTS,
-    GENERAL_ERROR,
-    INVALID_ROUTE_ERROR,
-    RESPONSE_OK
-} from '../../util/Constants';
+import { ENDPOINTS, GENERAL_ERROR, RESPONSE_OK } from '../../util/Constants';
 import SearchRoute from './SearchRoute';
 
 const propTypes = {
@@ -40,7 +35,7 @@ export default class SearchModal extends React.Component {
                 // console.log(response);
                 if (!response.data.data || response.data.data.length == 0) {
                     // this.setState({ error: response.data.text });
-                    this.setState({ error: INVALID_ROUTE_ERROR });
+                    this.setState({ error: GENERAL_ERROR });
                 } else {
                     const stopDatas = [];
                     const stopRefDatas = [];
