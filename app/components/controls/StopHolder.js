@@ -19,6 +19,18 @@ function getParentColumn(element) {
     return column;
 }
 
+function hasParentStopContent(element) {
+    // hacky way to check for a parent stop-content div
+    let div = element;
+    while (div) {
+        if (div.classList.contains('stop-content')) {
+            return true;
+        }
+        div = div.parentElement;
+    }
+    return false;
+}
+
 export default class StopHolder extends React.Component {
     constructor(props) {
         super(props);
@@ -61,7 +73,6 @@ export default class StopHolder extends React.Component {
             const currId = stopIds[i];
             const currView = (
                 <StopView
-                    draggable="false"
                     stopId={currId}
                     ref={instance => {
                         this.views.push(instance);
@@ -81,9 +92,17 @@ export default class StopHolder extends React.Component {
                     draggable="true"
                     index={i}
                     onDragStart={e => {
-                        e.target.classList.add('dragged');
-                        e.dataTransfer.setData('startIndex', i);
-                        e.dataTransfer.effectAllowed = 'move';
+                        // don't allow drag in or below stop-content elements,
+                        // since we need to allow scrolling
+                        const allowDrag = !hasParentStopContent(
+                            document.elementFromPoint(e.clientX, e.clientY)
+                        );
+                        console.log(allowDrag);
+                        if (true) {
+                            e.target.classList.add('dragged');
+                            e.dataTransfer.setData('startIndex', i);
+                            e.dataTransfer.effectAllowed = 'move';
+                        }
                     }}
                     onDragOver={e => {
                         if (e.preventDefault) {
