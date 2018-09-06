@@ -19,18 +19,6 @@ function getParentColumn(element) {
     return column;
 }
 
-function hasParentStopContent(element) {
-    // hacky way to check for a parent stop-content div
-    let div = element;
-    while (div) {
-        if (div.classList.contains('stop-content')) {
-            return true;
-        }
-        div = div.parentElement;
-    }
-    return false;
-}
-
 export default class StopHolder extends React.Component {
     constructor(props) {
         super(props);
@@ -92,13 +80,9 @@ export default class StopHolder extends React.Component {
                     draggable="true"
                     index={i}
                     onDragStart={e => {
-                        // don't allow drag in or below stop-content elements,
-                        // since we need to allow scrolling
-                        const allowDrag = !hasParentStopContent(
-                            document.elementFromPoint(e.clientX, e.clientY)
-                        );
-                        console.log(e);
-                        console.log(allowDrag);
+                        // Strangely, this prevents mobile browsers that don't
+                        // fully support drag-and-drop from starting the d-d
+                        // event rabbit hole
                         if (false) {
                             e.target.classList.add('dragged');
                             e.dataTransfer.setData('startIndex', i);
