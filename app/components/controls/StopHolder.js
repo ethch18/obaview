@@ -99,7 +99,7 @@ export default class StopHolder extends React.Component {
                         );
                         console.log(e);
                         console.log(allowDrag);
-                        if (allowDrag) {
+                        if (false) {
                             e.target.classList.add('dragged');
                             e.dataTransfer.setData('startIndex', i);
                             e.dataTransfer.effectAllowed = 'move';
