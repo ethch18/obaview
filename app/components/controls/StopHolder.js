@@ -85,9 +85,9 @@ export default class StopHolder extends React.Component {
                         // event rabbit hole
                         if (false) {
                             e.target.classList.add('dragged');
-                            e.dataTransfer.setData('startIndex', i);
-                            e.dataTransfer.effectAllowed = 'move';
                         }
+                        e.dataTransfer.setData('text/plain', i);
+                        e.dataTransfer.effectAllowed = 'move';
                     }}
                     onDragOver={e => {
                         if (e.preventDefault) {
@@ -120,13 +120,13 @@ export default class StopHolder extends React.Component {
                         }
 
                         const column = getParentColumn(e.target);
-                        const oldIndex = e.dataTransfer.getData('startIndex');
+                        const oldIndex = e.dataTransfer.getData('text/plain');
                         const newIndex = column.getAttribute('index');
 
                         if (oldIndex !== newIndex) {
                             this.props.stopReorderer(oldIndex, newIndex);
                         }
-                        e.dataTransfer.clearData('startIndex');
+                        e.dataTransfer.clearData('text/plain');
 
                         return false;
                     }}
