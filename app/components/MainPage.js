@@ -6,9 +6,6 @@ import SearchModal from './controls/SearchModal';
 import { COOKIE } from '../util/Constants';
 import axios from 'axios';
 import Cookies from 'universal-cookie';
-import { polyfill } from 'mobile-drag-drop';
-
-polyfill();
 
 export default class MainPage extends React.Component {
     constructor(props) {

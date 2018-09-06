@@ -88,7 +88,6 @@ export default class StopHolder extends React.Component {
                         if (e.preventDefault) {
                             e.preventDefault();
                         }
-                        e.dataTransfer.effectAllowed = 'move';
                         return false;
                     }}
                     onDragEnter={e => {
@@ -96,7 +95,6 @@ export default class StopHolder extends React.Component {
                             e.preventDefault();
                         }
                         getParentColumn(e.target).classList.add('hovered');
-                        e.dataTransfer.effectAllowed = 'move';
                     }}
                     onDragLeave={e => {
                         if (
