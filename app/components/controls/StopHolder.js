@@ -61,6 +61,7 @@ export default class StopHolder extends React.Component {
             const currId = stopIds[i];
             const currView = (
                 <StopView
+                    draggable="false"
                     stopId={currId}
                     ref={instance => {
                         this.views.push(instance);
