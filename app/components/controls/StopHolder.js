@@ -97,6 +97,7 @@ export default class StopHolder extends React.Component {
                         const allowDrag = !hasParentStopContent(
                             document.elementFromPoint(e.clientX, e.clientY)
                         );
+                        console.log(e);
                         console.log(allowDrag);
                         if (allowDrag) {
                             e.target.classList.add('dragged');
