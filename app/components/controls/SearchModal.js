@@ -64,7 +64,7 @@ export default class SearchModal extends React.Component {
                     }
 
                     if (response.data.data.length !== routes.length) {
-                        this.setState({ error: INVALID_ROUTE_ERROR });
+                        this.setState({ error: GENERAL_ERROR });
                     } else {
                         this.setState({
                             content: {
