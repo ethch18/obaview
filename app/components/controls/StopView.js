@@ -9,7 +9,8 @@ const propTypes = {
     stopId: PropTypes.string.isRequired,
     stopIndex: PropTypes.number.isRequired,
     stopDeleter: PropTypes.func.isRequired,
-    globalResetter: PropTypes.func
+    globalResetter: PropTypes.func,
+    isNewest: PropTypes.bool
 };
 
 export default class StopView extends React.Component {
@@ -159,9 +160,13 @@ export default class StopView extends React.Component {
             );
         }
 
+        const headingClass = this.props.isNewest
+            ? 'stop-heading stop-heading-newest'
+            : 'stop-heading';
+
         return (
             <div className="stop-wrapper">
-                <div className="stop-heading">
+                <div className={headingClass}>
                     <span
                         className={`${canRefresh ? 'clickable' : ''}`}
                         onClick={

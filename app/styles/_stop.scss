@@ -30,6 +30,20 @@
         border-radius: 2px;
     }
 
+    .stop-heading-newest {
+        animation: pulse 2s ease 1;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            background-color: $dark-primary-color;
+        }
+
+        50% {
+            background-color: $blue-grey;
+        }
+    }
+
     .stop-heading {
         background-color: $dark-primary-color;
         font-size: 20px;

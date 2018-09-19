@@ -18,6 +18,7 @@ export default class MainPage extends React.Component {
             routeCache: {},
             stopIds,
             stopSet,
+            newestStop: null,
             stopCache: {},
             cookies,
             showHelp: false
@@ -44,6 +45,7 @@ export default class MainPage extends React.Component {
             }
         }
         this.state.cookies.set(COOKIE, this.state.stopIds, { path: '/' });
+        this.setState({ newestStop: stopId });
         this.clearModal();
     }
 
@@ -80,6 +82,7 @@ export default class MainPage extends React.Component {
                     stopDeleter={this.deleteStop}
                     stopReorderer={this.reorderStop}
                     helpFunc={this.toggleHelp}
+                    newestStop={this.state.newestStop}
                 />
                 {!!this.state.currQuery && (
                     <SearchModal

@@ -7,7 +7,8 @@ const propTypes = {
     stopIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     stopDeleter: PropTypes.func.isRequired,
     stopReorderer: PropTypes.func.isRequired,
-    helpFunc: PropTypes.func.isRequired
+    helpFunc: PropTypes.func.isRequired,
+    newestStop: PropTypes.string
 };
 
 function getParentColumn(element) {
@@ -67,6 +68,7 @@ export default class StopHolder extends React.Component {
                     }}
                     stopIndex={i}
                     stopDeleter={this.props.stopDeleter}
+                    isNewest={currId === this.props.newestStop}
                 />
             );
             this.cols.push(
