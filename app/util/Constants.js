@@ -3,7 +3,7 @@ const isDev = window.location.hostname === 'localhost';
 export const ENDPOINTS = {
     BASE_URL: isDev
         ? 'http://localhost:8080'
-        : 'https://obaview.herokuapp.com',
+        : 'https://obaview.onrender.com',
     STOPS_FOR_ROUTE: '/stops-for-route/',
     STOP: '/stop/',
     ARRIVALS_DEPARTURES: '/arrivals-departures/',
